@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Footage Merge Tool</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Drone Footage Merge Tool</h1>
+        </header>
+
+        <main>
+            <section id="setup-panel">
+                <div class="input-group">
+                    <label>Input Folder (Card Root):</label>
+                    <div class="row">
+                        <input type="text" id="input-path" readonly placeholder="Select folder containing cards...">
+                        <button id="btn-select-input">Browse...</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Output Folder (Destination):</label>
+                    <div class="row">
+                        <input type="text" id="output-path" readonly placeholder="Select destination...">
+                        <button id="btn-select-output">Browse...</button>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="btn-scan" class="primary" disabled>Scan Folders</button>
+                </div>
+            </section>
+
+            <section id="scan-results" class="hidden">
+                <h2>Scan Summary</h2>
+                <div id="summary-content"></div>
+                <div class="confirmations">
+                    <label><input type="checkbox" id="check-input"> Input is correct</label>
+                    <label><input type="checkbox" id="check-output"> Output is correct</label>
+                    <label><input type="checkbox" id="check-merge-behavior"> I understand files will be merged</label>
+                </div>
+                <div class="actions">
+                    <button id="btn-merge" class="danger" disabled>Start Merge</button>
+                    <button id="btn-cancel" class="secondary">Cancel</button>
+                </div>
+            </section>
+
+            <section id="progress-panel" class="hidden">
+                <h2>Merging...</h2>
+                <progress id="main-progress" max="100" value="0"></progress>
+                <p id="progress-text">Waiting to start...</p>
+                <div id="logs"></div>
+            </section>
+        </main>
+    </div>
+    <script src="./scripts/ui.js"></script>
+</body>
+
+</html>

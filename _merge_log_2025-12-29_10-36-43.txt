@@ -1,0 +1,34 @@
+DRONE MERGE LOG - STARTED AT 29/12/2025, 4:06:43 pm
+------------------------------------------------
+
+[4:06:43 pm] --- STARTING MERGE ---
+[4:06:43 pm] Input Source VIDs: 15
+[4:06:43 pm] Output: D:\Test - Out
+[4:06:43 pm] Created folder: VID_20251228_111438
+[4:06:43 pm] ERROR: Failed to copy இ-நாம் (e&NAM) - தேசிய மின்னணு வேளாண் சந்தை.png from Card 1: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பி.எம். அன்னதாதா ஆப் சம்ரக்ஷன் அபியான் (PM&AASHA).png from Card 2: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பி.எம். பிரணாம் (PM&PRANAM).png from Card 3: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பிரதமரின் உணவு பதப்படுத்தலை ஊக்குவித்தல் திட்டம்.png from Card 4: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பிரதமரின் உழவர் கடன் அட்டை.png from Card 5: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பிரதமரின் கால்நடை சார்ந்த ஆலைகள் தொடங்கும் கடன் திட்டம்.png from Card 6: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பிரதான் மந்திரி ஃபாசல் பீமா யோஜனா.png from SD Card: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பிரதான் மந்திரி கிசான் சம்மான் நிதி.png from SD Card: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பிரதான் மந்திரி கிசான் மான் தன் யோஜனா (PM&KMY).png from SD Card: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy பிரதான் மந்திரி கிருஷி சிஞ்சாயி யோஜனா (PMKSY).png from SD Card: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy மண் வள அட்டை திட்டம்.png from SD Card: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] ERROR: Failed to copy வேம்பு கலந்த யூரியா.png from SD Card: Cannot read properties of undefined (reading 'webContents')
+[4:06:43 pm] Created folder: VID_20251228_111805
+[4:06:43 pm] Created folder: VID_20251228_112258
+[4:06:43 pm] Created folder: VID_20251228_112512
+[4:06:43 pm] Created folder: VID_20251228_112742
+[4:06:43 pm] Created folder: VID_20251228_113209
+[4:06:43 pm] Created folder: VID_20251228_113519
+[4:06:43 pm] Created folder: VID_20251228_113756
+[4:06:43 pm] Created folder: VID_20251228_113910
+[4:06:43 pm] Created folder: VID_20251228_114035
+[4:06:43 pm] Created folder: VID_20251228_114124
+[4:06:43 pm] Created folder: VID_20251228_114207
+[4:06:43 pm] Created folder: VID_20251228_114528
+[4:06:43 pm] Created folder: VID_20251228_115146
+[4:06:43 pm] Created folder: VID_20251228_115319
+[4:06:43 pm] MERGE HALTED due to critical errors.

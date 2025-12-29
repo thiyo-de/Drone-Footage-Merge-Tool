@@ -1,0 +1,317 @@
+Perfect.
+Below is a **FULL, DETAILED, ELECTRON-READY FEATURE LIST** for your **internal office software**.
+This is written like a **Product Requirements / Feature Specification** you can directly hand to development (or follow yourself).
+
+No code. No shortcuts. Fully structured.
+
+---
+
+# 🛩️ DRONE FOOTAGE MERGE TOOL
+
+### Cross-Platform Desktop App (Windows + macOS)
+
+**Tech Stack:** Electron + Node.js
+**Usage:** Internal office tool (not for sale)
+
+---
+
+## 1️⃣ CORE PURPOSE
+
+To automatically **merge same-named `VID_...` folders** from multiple drone cards into **one single VID folder** containing **all files**, with **mandatory user confirmation**, **zero overwrite risk**, and **complete logs**, making stitching fast and error-free.
+
+---
+
+## 2️⃣ SUPPORTED PLATFORMS
+
+* ✅ Windows 10 / 11 (.exe)
+* ✅ macOS (Intel + Apple Silicon) (.dmg)
+* ❌ No Linux (optional later)
+
+---
+
+## 3️⃣ SUPPORTED INPUT STRUCTURE
+
+```
+Input Root/
+├── Card 1/
+├── Card 2/
+├── Card 3/
+├── Card 4/
+├── Card 5/
+├── Card 6/
+└── SD Card/
+```
+
+Each parent contains:
+
+```
+VID_YYYYMMDD_HHMMSS/
+  ├── DJI_0001.MP4
+  ├── DJI_0001.SRT
+  ├── DJI_0001.THM
+  └── ...
+```
+
+---
+
+## 4️⃣ FINAL OUTPUT STRUCTURE (LOCKED)
+
+```
+Merged/
+├── VID_YYYYMMDD_HHMMSS/
+│   ├── Card1__DJI_0001.MP4
+│   ├── Card1__DJI_0001.SRT
+│   ├── Card2__DJI_0001.MP4
+│   ├── SD__DJI_0001.MP4
+│   └── ...
+├── VID_YYYYMMDD_HHMMSS/
+└── _merge_log_YYYY-MM-DD.txt
+```
+
+✔ One VID folder
+✔ All files merged
+✔ Safe renaming
+
+---
+
+## 5️⃣ MAIN FEATURES (HIGH LEVEL)
+
+### A. Folder Selection
+
+* Select **Input Root Folder**
+* Select **Output Folder**
+* Validation:
+
+  * Input must contain folders
+  * Output must be writable
+* Clear path display
+
+---
+
+### B. Scan-Only Mode (NO COPY)
+
+* Read-only scan
+* Detect parent folders
+* Detect all `VID_...` subfolders
+* Group folders by VID name
+* Count files per source
+* Detect filename collisions
+* Estimate total size
+
+---
+
+### C. Mandatory User Confirmation (CRITICAL FEATURE)
+
+* Scan Summary Screen
+* User must confirm:
+
+  * Input is correct
+  * Output is correct
+  * Merge behavior understood
+* Confirmation checkboxes required
+* **Merge button disabled until confirmed**
+* Cancel / Rescan options
+
+---
+
+### D. Flat Merge Engine (Core Logic)
+
+* Create one folder per VID
+* Copy all files into same folder
+* No Card subfolders in output
+* Non-destructive copy only (default)
+
+---
+
+### E. Smart Filename Collision Handling
+
+* Auto-rename on collision
+* Format:
+
+  ```
+  {ParentName}__{OriginalFileName}
+  ```
+* Applies consistently to:
+
+  * MP4
+  * SRT
+  * THM
+  * LRF
+  * Any related files
+
+---
+
+### F. Metadata-Safe Copying
+
+* Preserve file timestamps (created / modified)
+* Preserve extensions and casing
+* Maintain MP4–SRT linkage
+
+---
+
+### G. Live Progress & Status UI
+
+* Overall progress bar
+* Per-VID progress
+* Current parent being copied
+* Cancel / Pause support (optional)
+
+---
+
+### H. Verification After Copy
+
+* Verify copied file counts
+* Compare expected vs actual
+* Flag missing or failed files
+* Continue or stop on error (configurable)
+
+---
+
+### I. Logging System (AUDIT SAFE)
+
+#### 1. Real-Time Log Panel
+
+* Shows:
+
+  * Copy actions
+  * Rename events
+  * Errors
+  * Completion status
+
+#### 2. Persistent Log File
+
+* Saved automatically in output folder
+* Includes:
+
+  * Scan summary
+  * User confirmation timestamp
+  * Per VID results
+  * Errors (if any)
+
+---
+
+## 6️⃣ OPTIONAL / PHASE-2 FEATURES (Nice to Have)
+
+### A. Copy Mode Options
+
+* Copy only (default)
+* Move after successful merge (locked behind extra confirmation)
+
+---
+
+### B. Duplicate Detection (Advanced)
+
+* Detect identical files using:
+
+  * File size
+  * Optional checksum
+* Option to skip true duplicates
+
+---
+
+### C. Stitch-Ready Mode
+
+* Auto-sort clips by timestamp
+* Optional flat export for editors
+* Optional CSV timeline export
+
+---
+
+### D. Presets
+
+* Save common input/output paths
+* Quick launch workflows
+
+---
+
+## 7️⃣ UI SCREENS (MINIMUM SET)
+
+1. Home / Folder Selection
+2. Scan Summary & Confirmation
+3. Merge Progress
+4. Completion & Report
+
+---
+
+## 8️⃣ ERROR HANDLING & SAFETY
+
+* Never overwrite files
+* Never delete originals without explicit permission
+* Graceful handling of:
+
+  * Missing VID folders
+  * Permission errors
+  * Locked files
+  * Disk space issues
+* Clear user-friendly error messages
+
+---
+
+## 9️⃣ PERFORMANCE & SCALE
+
+* Handles:
+
+  * 100+ VID folders
+  * Thousands of files
+  * 100+ GB data
+* Uses streaming copy (no RAM overload)
+
+---
+
+## 🔟 SECURITY & OFFICE SAFETY
+
+* Local filesystem only
+* No internet required
+* No telemetry
+* No auto-updates (manual update only)
+
+---
+
+## 1️⃣1️⃣ ELECTRON ARCHITECTURE (OVERVIEW)
+
+* Electron main process:
+
+  * File system access
+  * Merge engine
+  * Logging
+* Renderer process:
+
+  * UI
+  * Confirmation screens
+  * Progress display
+* IPC communication between UI & engine
+
+---
+
+## 1️⃣2️⃣ PROJECT DELIVERABLES
+
+* Windows `.exe`
+* macOS `.dmg`
+* Internal user guide (1 page)
+* Sample log file
+* Versioned builds
+
+---
+
+## 1️⃣3️⃣ SUCCESS CRITERIA
+
+✔ One-click merge
+✔ Zero manual copying
+✔ Zero overwrite risk
+✔ Clear confirmation
+✔ Trusted logs
+✔ Editors save hours per shoot
+
+---
+
+## 🟢 STATUS: READY FOR DEVELOPMENT
+
+If you want, next I can:
+
+* Create **UI wireframes**
+* Create **Electron folder structure**
+* Create **development task list**
+* Create **office SOP**
+* Freeze this as **FINAL SPEC v1.0**
+
+Just tell me what’s next.
